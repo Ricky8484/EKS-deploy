@@ -7,7 +7,7 @@ on:
            - main
 
 env:
-    tf_actions_working_dir: ./jenkins server
+    tf_actions_working_dir: ./terraform
 jobs:
     creat-EKS:
         runs-on: ubuntu-latest
