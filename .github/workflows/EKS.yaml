@@ -7,7 +7,7 @@ on:
            - main
 
 env:
-    tf_actions_working_dir: ./jenkins server
+    tf_actions_working_dir: ./terraform
 jobs:
     creat-EKS:
         runs-on: ubuntu-latest
@@ -26,8 +26,8 @@ jobs:
              - name: configure aws credentials
                uses: aws-actions/configure-aws-credentials@v3
                with:
-                 role-to-assume: arn:aws:iam::176377892878:role/make-role
-                 role-session-name: make-role
+                 role-to-assume: arn:aws:iam::176377892878:user/EKS
+                 role-session-name: EKS
                  aws-region: us-east-1
 
              - name: terraform
